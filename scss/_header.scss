@@ -1,0 +1,406 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+.header 
+{
+    z-index: 1;
+    ul{
+       padding:0px;
+      }
+}
+.preheader{
+    
+   @include background;
+   padding:10px 110px;
+   display: flex;
+ 
+}
+.modal-open {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+.preheaderSubcontent__grid__item{
+    padding:20px;
+
+    ul 
+    {
+        li{
+    cursor: pointer;
+    list-style: none;
+    font-size: 12px;
+    padding:8px 0px;
+
+    &:hover{
+        background: $hoverBlue;
+    }
+    }
+    }
+    h4{
+        padding: 7px 0px;
+        border-bottom: 1px solid $underline;
+    }
+}
+.preheaderSubcontent__grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.preheader__right__links{
+    display: flex;
+}
+.preheaderSubcontent{
+
+    display: none;
+    @include background;
+   padding:0px 80px;
+}
+
+.header__content{
+    margin:0px auto;
+    max-width:1440px;
+}
+.bannerContainer__content{
+    margin:0px auto;
+    max-width:1440px;
+}
+.studyHeader__content{
+    margin:0px auto;
+    max-width:1440px;
+}
+.preheader__left{
+    display:flex;
+    padding: 0px;
+    margin:0px auto;
+    max-width:1440px;
+    li{
+        cursor: pointer;
+        text-decoration: none;
+        list-style: none;
+        margin-right: 10px;
+        font-size: 12px;
+        a:hover{
+            border-bottom: 1px solid $underline;
+        }
+    }
+}
+
+.preheader__right{
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    text-decoration: none;
+    list-style: none;
+    margin-right: 10px;
+    font-size: 12px;
+    width:100%;
+    margin:0px auto;
+    max-width:1440px;
+
+    li{
+        margin-right: 10px;
+        a{
+            color: $textColorWhite;
+            text-decoration: none;
+        }
+    }
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: -webkit-fill-available;
+   
+    
+  }
+
+.logo{
+    width:30vw;
+   
+}
+#hamburger{
+    display:none;
+}
+
+.header{
+    
+    padding: 0 100px;
+    background: $backgroundWhite;
+   
+}
+
+.header__nav{
+    margin-bottom: 30px;
+    ul{
+        display: flex;
+       
+       
+        padding: 0px;
+        margin-left: 10%;
+      li{
+  
+        list-style: none;
+        margin-left:6%;
+        padding:5px 0px;
+        &:hover{
+            color: $backgroundBlue;
+        }
+        &:hover .fa-angle-up{
+            color: $backgroundBlue;
+            display:inline;
+           
+           
+        }
+        &:hover .fa-angle-down{
+            display: none;
+            margin-left:5px;
+        }
+        &:hover ul{
+            position: absolute;
+            display:block;
+        }
+        ul {
+            margin:0px;
+            padding:0px;
+            display: none;
+            li{
+                margin:0px;
+                padding:0px;
+                cursor: pointer;
+                width:200px;
+                @include background;
+                padding:10px 5px;
+                border-top: 1px solid $underline;
+                transition: .25s all ease-in-out;
+                &:hover{
+                    width:200px;
+                    cursor: pointer;
+                    opacity: 0.7;
+                    color: $textColorWhite;
+                    padding-left:10px;
+                    
+                }
+              
+            }
+           
+      }
+    }
+    
+}
+}
+
+.studyHeader:hover{
+    color: $backgroundBlue;
+}
+
+
+.fa-angle-up{
+    display: none;
+}
+
+
+
+h4{
+    margin:0px;
+}
+#close-btn{
+    display:none;
+}
+.header__nav__responsive{
+    display:none;
+}
+#preheaderLeft{
+    border-top:1px solid $backgroundBlue;
+}
+.header__nav__responsive 
+    {
+        li {
+    padding:10px 20px;
+    list-style: none;
+    color:$backgroundBlue;
+        }
+        
+}
+
+@include lgtablet {
+    
+    
+    .header__nav {
+        ul{
+       
+        margin:0px;
+        li{
+            margin-left: 32px;
+            
+        }
+    }
+    }
+    #hamburger,.fa-times{
+        display:none;
+    }
+    .logo {
+        width: 50vw;
+        height: 10vh;
+    }
+}
+@include smtablet {
+  
+    .preheader__left{
+        display:none;
+    }
+     
+    .header{
+       padding:0px 20px;
+   }
+   .logo{
+       width:70vw;
+       height: 20vh;
+      
+   }
+   .preheader__right__links{
+       margin-right: 70%;
+   }
+
+   .preheader{
+       padding:20px 20px;
+    
+   }
+   #hamburger{
+       display:block;
+   }
+   .preheaderSubcontent__grid{
+       display:block;
+   }
+   .responsive 
+   {
+       ul{
+      
+       display: block;
+     
+     
+     }
+    }
+     .header__nav {
+       display:none;
+       ul
+       { 
+      
+        li:hover ul{
+           position: relative;
+       }
+       }
+   }
+   .responsive {
+       display: block;
+       ul 
+       {
+           li{
+           background: $backgroundWhite;
+           padding:5px 0px;
+           color: $backgroundBlue;
+       }
+    }
+   }
+  
+  
+
+   .header__nav .responsive {
+       ul{
+       padding: 0px;
+       margin:0px;
+       }
+   }
+}
+   #preheaderLeft{
+       border-top:1px solid $backgroundBlue;
+   }
+   .header__nav__responsive 
+    {
+        li {
+       padding:10px 20px;
+       list-style: none;
+       color:$backgroundBlue;
+   }
+    }
+    
+
+    @include mobile{
+  
+     .preheader__left{
+         display:none;
+     }
+      
+     .header{
+        padding:0px;
+    }
+    .logo{
+        width:100vw;
+        height: 10vh;
+        margin: auto;
+    display: block;
+       
+    }
+    .preheader__right__links{
+        margin-right: 50%;
+    }
+    .preheader{
+        padding:20px 20px;
+     
+    }
+    #hamburger{
+        display:block;
+    }
+    .preheaderSubcontent__grid{
+        display:block;
+    }
+    .responsive 
+    {
+        ul{
+       
+        display: block;
+        }
+      }
+   
+      .header__nav {
+         
+        display:none;
+        ul{
+            
+            margin:0px;
+        li:hover ul{
+            position: relative;
+        }
+    }
+}
+    .responsive {
+        
+        display: block;
+        ul
+        {
+            
+             li{
+            background: $backgroundWhite;
+            padding:5px 0px;
+            color: $backgroundBlue;
+            
+             }
+        }
+    }
+
+    .header__nav .responsive 
+        {
+            ul{
+        padding: 0px;
+        margin:0px;
+            }
+    }
+    .bannerContainer__text {
+        
+        width: 80%;
+        text-align: center;
+    }
+}
+   
+
+  
+    

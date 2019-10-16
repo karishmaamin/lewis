@@ -1,0 +1,233 @@
+.banner-text {
+  color: #ffffff;
+  font-family: "Alfa Slab One",serif;
+  font-size: 2.75rem;
+  padding-left: 100px;
+  padding-top: 100px;
+  font-weight: bolder;
+  width: 30%;
+}
+
+.text {
+  padding-left: 100px;
+  padding-top: 10px;
+  color: #ffffff;
+  font-family: 40px  "Alfa Slab One",serif;
+  font-size: 2rem;
+  width: 30%;
+}
+
+.banner-con {
+  /* position: relative; */
+  background: url("../images/sport.jpg");
+  height: 400px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.study-header {
+  cursor: pointer;
+  margin: 20px 100px;
+  border-bottom: 1px solid #ccc;
+}
+
+.study-header-text {
+  font-weight: bold;
+}
+
+.fa-home {
+  color: #004b8d;
+}
+
+.study-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px 100px;
+}
+
+.study-sidebar {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  padding: 20px 0px;
+}
+
+.study-sidebar ul {
+  padding: 0px;
+  border: none;
+  background: #edf6fb;
+  padding: 20px;
+}
+
+.study-sidebar ul li {
+  cursor: pointer;
+  font-family: "Roboto",sans-serif;
+  font-weight: 400;
+  list-style: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #004b8d;
+}
+
+.study-sidebar ul li a:hover {
+  border-bottom: 1px solid #004b8d;
+}
+
+#study-sidebar-header {
+  padding-right: 40px;
+  background: #004b8d;
+  padding-left: 5px;
+  color: #ffffff;
+}
+
+.study-content {
+  -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
+  padding-left: 24px;
+  margin-top: 30px;
+}
+
+.study-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px 100px;
+}
+
+.study-sidebar {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  padding: 20px 0px;
+}
+
+.study-content h2 {
+  color: #004b8d;
+  font-family: "Alfa Slab One",serif;
+  font-size: 2rem;
+}
+
+.study-content-text {
+  line-height: 1.8;
+}
+
+.study-content-nav {
+  font-size: 1.5rem;
+  font-family: "Alfa Slab One",serif;
+  font-weight: bold;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+.study-content-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px;
+}
+
+.study-content-nav ul li {
+  cursor: pointer;
+  color: #004b8d;
+  list-style: none;
+  padding-right: 10px;
+  text-decoration: underline;
+}
+
+.study-content-nav ul li:hover {
+  text-decoration: none;
+}
+
+.study-content-img {
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  width: 250px;
+  margin: 5px;
+}
+
+.study-content-img img {
+  width: 100%;
+}
+
+.study-content-img img:hover {
+  opacity: 0.5;
+}
+
+.study-content-caption {
+  display: block;
+  background-color: #E5E5E5;
+  color: #004b8d;
+  width: 100%;
+  height: 50px;
+  padding-top: 10px;
+  letter-spacing: 0.1rem;
+  font-family: 14.4px "Roboto",sans-serif;
+}
+
+.study-content-caption:hover {
+  background-color: #004b8d;
+  color: #E5E5E5;
+}
+
+.help {
+  margin-top: 50px;
+}
+
+.help h2 {
+  margin: 5px 0px;
+  color: #004b8d;
+  font-family: "Alfa Slab One",serif;
+  font-size: 2rem;
+  letter-spacing: 0.125rem;
+}
+
+.help p {
+  font-family: "Roboto",sans-serif;
+  line-height: 1.8;
+}
+
+strong {
+  cursor: pointer;
+  color: #004b8d;
+  font-family: "Roboto",sans-serif;
+  text-decoration: underline;
+  margin-top: 20px;
+}
+
+strong:hover {
+  color: gray;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1059px) and (min-width: 480px) {
+  .study-body {
+    /* width:100%; */
+    display: block;
+  }
+  .study-header, .study-body, .study-content {
+    padding: 10px 20px;
+    margin: 0px 0px;
+  }
+  .study-content-img {
+    width: 220px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .study-sidebar, .study-content, .study-body {
+    display: block;
+  }
+  .study-content, .study-body {
+    padding: 20px;
+  }
+  .study-header {
+    margin: 20px 20px;
+  }
+  .study-content-nav ul {
+    display: block;
+    padding: 0px;
+  }
+}
+/*# sourceMappingURL=layout.css.map */
