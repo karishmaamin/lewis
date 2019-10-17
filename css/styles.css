@@ -111,7 +111,7 @@
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: 1500px) {
+@media screen and (orientation: landscape) and (max-width: 768px) and (min-width: 300) {
   .header .sticky {
     position: relative;
   }
@@ -317,7 +317,7 @@ h4 {
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: 1500px) {
+@media screen and (orientation: landscape) and (max-width: 768px) and (min-width: 300) {
   .logo .sticky {
     position: relative;
   }
@@ -357,7 +357,7 @@ h4 {
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: 1500px) {
+@media screen and (orientation: landscape) and (max-width: 768px) and (min-width: 300) {
   .sticky {
     position: relative;
   }
@@ -455,7 +455,7 @@ h4 {
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: 1500px) {
+@media screen and (orientation: landscape) and (max-width: 768px) and (min-width: 300) {
   .studyHeader .sticky {
     position: relative;
   }
@@ -541,7 +541,7 @@ h4 {
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: 1500px) {
+@media screen and (orientation: landscape) and (max-width: 768px) and (min-width: 300) {
   .studyBody .sticky {
     position: relative;
   }
@@ -659,7 +659,7 @@ h4 {
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: 1500px) {
+@media screen and (orientation: landscape) and (max-width: 768px) and (min-width: 300) {
   .studyContent .sticky {
     position: relative;
   }
@@ -790,7 +790,7 @@ strong:hover {
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: 1500px) {
+@media screen and (orientation: landscape) and (max-width: 768px) and (min-width: 300) {
   .footerBanner .sticky {
     position: relative;
   }
@@ -952,7 +952,7 @@ strong:hover {
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: 1500px) {
+@media screen and (orientation: landscape) and (max-width: 768px) and (min-width: 300) {
   .footerarea .sticky {
     position: relative;
   }
