@@ -1,356 +1,365 @@
-
-.footerBanner{
+.footerBanner {
     display: flex;
-    background:url("../images/footer_banner.jpg");
+    background: url("../images/footer_banner.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding:10%;
+    padding: 10%;
     text-align: center;
 
-    h4{
+    h4 {
         font-family: 44px $alpaFont;
         color: $textColorWhite;
         font-size: 2.75rem;
-        margin:0px 0px;
+        margin: 0px 0px;
         text-align: center;
         font-weight: bold;
     }
-    p{
+
+    p {
         font-family: $roboFont;
         line-height: 1.5;
         color: #ffffff;
         font-size: 1.65rem;
     }
-  
-    
-}
-.show{
-    display:block;
-}
 
-.footerBanner__text{
-    margin:auto;
-}
-.footerBanner__sidebar{
-    margin: auto;
+    &__text {
+        margin: auto;
+    }
 
-    ul
-    { li{
-        cursor:pointer;
-        font-size: 1.65rem;
-        font-weight: 400;
-        list-style: none;
-        margin-top:5px;
-        text-align: left;
-        @include background;
-        padding:10px 10px;
-        &:hover{
-            background: $hoverBlue;
-            margin-top:5px;
+    &__sidebar {
+        margin: auto;
+
+        ul {
+            li {
+                cursor: pointer;
+                font-size: 1.65rem;
+                font-weight: 400;
+                list-style: none;
+                margin-top: 5px;
+                text-align: left;
+                @include background;
+                padding: 10px 10px;
+
+                &:hover {
+                    background: $hoverBlue;
+                    margin-top: 5px;
+                }
+            }
+        }
+
+    }
+
+    @include smtablet {
+        display: block;
+
+        &__sidebar {
+            ul {
+                li {
+                    width: 20%;
+                    margin: 10px auto;
+                }
+            }
         }
     }
-}
-    
+
+    @include lgtablet {
+        display: block;
+
+        &__sidebar {
+            ul {
+                li {
+                    width: 15%;
+                    margin: 10px auto;
+                }
+            }
+        }
+    }
+
+    @include mobile {
+
+        padding: 20px, 5px;
+        display: block;
+
+        &__text {
+            display: block;
+        }
+
+        &__sidebar {
+            width: 150px;
+            align-content: center;
+        }
+
+
+
+    }
 }
 
-.footerarea{
-   
-    padding:20px;
+.show {
+    display: block;
+}
+
+.footerarea {
+
+    padding: 20px;
     background: $backgroundBlue;
-   
-}
-.footerarea__container{
-    padding:0 0 25px 20px;
-  border-bottom: 1px solid $underline;
-  max-width: 1440px;
-  margin:0 auto;
+
+    &__container {
+        padding: 0 0 25px 20px;
+        border-bottom: 1px solid $underline;
+        max-width: 1440px;
+        margin: 0 auto;
+
+        @include desktop {
+            display: flex;
+        }
+
+
+        &__media {
+            flex: 1;
+
+            h4 {
+                font-family: $roboFont;
+                font-size: 20px;
+                color: $textColorWhite;
+                margin: 20px 0px;
+            }
+
+            ul {
+                padding: 0px;
+
+                li {
+                    cursor: pointer;
+                    font-family: $roboFont;
+                    color: $textColorWhite;
+                    list-style: none;
+                    padding: 5px 0px;
+                    font-size: 15px;
+                }
+            }
+        }
+
+        &__tools {
+            flex: 1;
+
+            h4 {
+                font-family: $roboFont;
+                font-size: 20px;
+                color: $textColorWhite;
+                margin: 20px 0px;
+            }
+
+            ul {
+                padding: 0px;
+
+                li {
+                    cursor: pointer;
+                    font-family: $roboFont;
+                    color: $textColorWhite;
+                    list-style: none;
+                    padding: 5px 0px;
+                    font-size: 15px;
+                }
+            }
+        }
+
+        &__administration {
+            flex: 1;
+
+            h4 {
+                font-family: $roboFont;
+                font-size: 20px;
+                color: $textColorWhite;
+                margin: 20px 0px;
+            }
+
+            ul {
+                padding: 0px;
+
+                li {
+                    cursor: pointer;
+                    font-family: $roboFont;
+                    color: $textColorWhite;
+                    list-style: none;
+                    padding: 5px 0px;
+                    font-size: 15px;
+                }
+            }
+        }
+
+        &__address {
+
+            flex: 2;
+
+            h4 {
+                margin: 20px 0px;
+                font-family: $roboFont;
+                font-size: 20px;
+                color: $textColorWhite;
+
+
+
+            }
+
+        }
+
+        &__mission {
+            flex: 1;
+            margin: auto 0;
+
+            ul {
+                padding: 0px;
+
+                li {
+                    cursor: pointer;
+                    font-family: $roboFont;
+                    color: $textColorWhite;
+                    list-style: none;
+                    padding: 5px 0px;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    @include lgtablet {
+
+        &__container {
+            display: block;
+        }
+
+    }
+
+    @include mobile {
+
+        &__container {
+
+            display: block;
+            padding-left: 0px;
+
+            &__address {
+                h4 {
+                    margin: 0px;
+                    padding-top: 20px;
+                }
+
+            }
+
+            &__media,
+            &__tools,
+            &__administration,
+            &__mission {
+                display: block;
+            }
+
+        }
+
+    }
 }
 
 
-.footerarea__container__media{
-    flex:1;
-    h4{
-        font-family:  $roboFont;
-        font-size: 20px;
-        color: $textColorWhite;
-        margin:20px 0px;
-    }
-    ul{
-        padding: 0px; 
-        li{
-        cursor:pointer;
-        font-family: $roboFont;
-        color: $textColorWhite;
-        list-style: none;
-        padding:5px 0px;
-        font-size: 15px;
-        }
-    }
-}
-.footerarea__container__tools{
-    flex:1;
-    h4{
-        font-family:  $roboFont;
-        font-size: 20px;
-        color: $textColorWhite;
-        margin:20px 0px;
-    }
-    ul{
-        padding: 0px; 
-        li{
-        cursor:pointer;
-        font-family: $roboFont;
-        color: $textColorWhite;
-        list-style: none;
-        padding:5px 0px;
-        font-size: 15px;
-        }
-    }
-}
-.footerarea__container__administration{
-flex: 1;
-    h4{
-        font-family:  $roboFont;
-        font-size: 20px;
-        color: $textColorWhite;
-        margin:20px 0px;
-    }
-    ul{
-        padding: 0px; 
-        li{
-        cursor:pointer;
-        font-family: $roboFont;
-        color:$textColorWhite;
-        list-style: none;
-        padding:5px 0px;
-        font-size: 15px;
-        }
-    }
-}
-.footerarea__container__address{
 
-    flex: 2;
-    h4{
-        margin:20px 0px;
-        font-family:  $roboFont;
-        font-size: 20px;
-        color: $textColorWhite;
-        
-       
-        
-    }
- 
-}
-.footerarea__container__mission {
-    flex: 1;
-    margin:auto 0;
-    ul{
-        padding: 0px; 
-        li{
-        cursor:pointer;
-        font-family: $roboFont;
-        color:$textColorWhite;
-        list-style: none;
-        padding:5px 0px;
-        font-size: 15px;
-        }
-    }
-}
-.contactInfo{
-    display:flex;   
-    padding:20px 0px;
-}
-.contactInfo__address {
-    a{
-        display:block;
-        cursor:pointer;
-        font-family: $roboFont;
-        color: $textColorWhite;
-        list-style: none;
-        padding:5px 0px;
-        font-size: 15px;
-    }
-}
-.contact--left{
-    margin-left:20px;
-}
 
-.social_links{
+.contactInfo {
     display: flex;
-    li{
+    padding: 20px 0px;
+
+    &__address {
+        a {
+            display: block;
+            cursor: pointer;
+            font-family: $roboFont;
+            color: $textColorWhite;
+            list-style: none;
+            padding: 5px 0px;
+            font-size: 15px;
+        }
+    }
+}
+
+.contact--left {
+    margin-left: 20px;
+}
+
+.social_links {
+    display: flex;
+
+    li {
         margin-right: 10px;
     }
 }
 
-.map{
-    width:50%;
-    height:100px;
+.map {
+    width: 50%;
+    height: 100px;
     object-fit: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
 }
-.con-admision{
+
+.con-admision {
     font-family: $roboFont;
     color: $textColorWhite;
     list-style: none;
     font-size: 15px;
-    padding:15px 0px;
-   
-    
+    padding: 15px 0px;
+
+
 }
 
-ol 
-{
-    li{
-    display: block;
-  
-    background: $backgroundBlue;
+ol {
+    li {
+        display: block;
+
+        background: $backgroundBlue;
     }
 }
-.footerDown{
-   
+
+.footerDown {
+
     padding: 10px 0px 10px 20px;
-    p,div{
-        display:inline-block;
-        width:45%;
-        color:$textColorWhite;
-    }
-}
 
-.footerDown__right {
-    ul{
-        li{
-            list-style: none;
-            float: right;
-            margin-right:10px;
-            font-size:14px;
-        }
+    p,
+    div {
+        display: inline-block;
+        width: 45%;
+        color: $textColorWhite;
     }
 
-        
-}
-
-@include desktop{
-    .footerarea__container{
-       
-        display: flex;
-        
-    }
-
-}
-     
-@include smtablet {
-    
-    .footerBanner{
-        display:block;
-       
-    }
-    .footerBanner__sidebar 
-    {
-        ul 
-        {
-            li{
-        width:20%;
-        margin:10px auto;
+    &__right {
+        ul {
+            li {
+                list-style: none;
+                float: right;
+                margin-right: 10px;
+                font-size: 14px;
             }
         }
+
+
     }
 }
-@include lgtablet {
-    
-   .footerBanner{
-       display:block;
-   }
-   .footerBanner__sidebar 
-    {
-        ul 
-        {
-            li{
-        width:12%;
-        margin:10px auto;
-            }
-        }
-    }
-        
-    
-    .footerarea__container{
-        display:block;
+
+@include mobile {
+
+    .contactInfo {
+        display: block;
     }
 
-.footerBanner{
-      height:300px;
-      margin:auto;
-      padding:30px;
-        
-}
-}
-    @include mobile{
-        
-        .footerarea__container{
-           
-            display: block;
-            padding-left:0px;
-           
-        }
-
-        .footerarea__container__address,.footerarea__container__media,.footerarea__container__tools,.footerarea__container__administration,.footerarea__container__mission{
-            display:block;
-           
-           
-        }
-        .studyBody__sidebar,.studyContent,.studyBody{
-            display:block;
-        }
-        .footerBanner,.footerBanner__text,.footerBanner__sidebar{
-            display:block;
-            
-            
-        }
-        .contactInfo{
-            display:block;
-        }
-        .contact--left{
-            margin:0px;
-        }
-        .footerBanner{
-            padding:20px,5px;
-        }
-        .footerBanner__sidebar{
-            width:150px;
-            align-content: center;
-            
-        }
-     
-        .studyContent,.studyBody{
-            padding:20px;
-        }
-        .footerDown{
-            padding:20px 10px;
-            font-size: 12px;
-        }
-        .map{
-            width:100%;
-        }
-        .studyHeader{
-            margin:20px 20px;
-        }
-        .studyContent__nav 
-        {
-            ul{
-          display: block;
-          padding:0px;
-            
-         }
-        }
-       .footerarea__container__address {
-           h4{
-           margin:0px;
-           padding-top:20px;
-       }
-       }
-     
-        
+    .contact--left {
+        margin: 0px;
     }
+
+
+    .footerDown {
+        padding: 20px 10px;
+        font-size: 12px;
+    }
+
+    .map {
+        width: 100%;
+    }
+
+}

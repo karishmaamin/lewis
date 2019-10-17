@@ -2,135 +2,34 @@
     padding:0px;
     margin:0px;
 }
+
+
+
 .header 
 {
-    z-index: 1;
-    ul{
-       padding:0px;
-      }
-}
-.preheader{
-    
-   @include background;
-   padding:10px 110px;
-   display: flex;
- 
-}
-.modal-open {
-    height: 100vh;
-    overflow-y: hidden;
-  }
-.preheaderSubcontent__grid__item{
-    padding:20px;
 
-    ul 
-    {
-        li{
-    cursor: pointer;
-    list-style: none;
-    font-size: 12px;
-    padding:8px 0px;
-
-    &:hover{
-        background: $hoverBlue;
-    }
-    }
-    }
-    h4{
-        padding: 7px 0px;
-        border-bottom: 1px solid $underline;
-    }
-}
-.preheaderSubcontent__grid{
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-}
-
-.preheader__right__links{
-    display: flex;
-}
-.preheaderSubcontent{
-
-    display: none;
-    @include background;
-   padding:0px 80px;
-}
-
-.header__content{
-    margin:0px auto;
-    max-width:1440px;
-}
-.bannerContainer__content{
-    margin:0px auto;
-    max-width:1440px;
-}
-.studyHeader__content{
-    margin:0px auto;
-    max-width:1440px;
-}
-.preheader__left{
-    display:flex;
-    padding: 0px;
-    margin:0px auto;
-    max-width:1440px;
-    li{
-        cursor: pointer;
-        text-decoration: none;
-        list-style: none;
-        margin-right: 10px;
-        font-size: 12px;
-        a:hover{
-            border-bottom: 1px solid $underline;
-        }
-    }
-}
-
-.preheader__right{
-    display: flex;
-    justify-content: flex-end;
-    cursor: pointer;
-    text-decoration: none;
-    list-style: none;
-    margin-right: 10px;
-    font-size: 12px;
-    width:100%;
-    margin:0px auto;
-    max-width:1440px;
-
-    li{
-        margin-right: 10px;
-        a{
-            color: $textColorWhite;
-            text-decoration: none;
-        }
-    }
-}
-
-.sticky {
-    position: fixed;
-    top: 0;
-    width: -webkit-fill-available;
-   
-    
-  }
-
-.logo{
-    width:30vw;
-   
-}
-#hamburger{
-    display:none;
-}
-
-.header{
-    
     padding: 0 100px;
     background: $backgroundWhite;
-   
+    z-index: 1;
+    &__content{
+        margin:0px auto;
+        max-width:1440px;
+    }
+       ul{
+       padding:0px;
+      }
+    &__nav{
+    margin-bottom: 30px;
+    &__responsive 
+    {
+        li {
+    padding:10px 20px;
+    list-style: none;
+    color:$backgroundBlue;
+        }
+        
 }
 
-.header__nav{
-    margin-bottom: 30px;
     ul{
         display: flex;
        
@@ -138,28 +37,29 @@
         padding: 0px;
         margin-left: 10%;
       li{
-  
+        position: relative;
         list-style: none;
         margin-left:6%;
         padding:5px 0px;
         &:hover{
             color: $backgroundBlue;
+                .fa-angle-up{
+                color: $backgroundBlue;
+                display:inline;
+                    
         }
-        &:hover .fa-angle-up{
-            color: $backgroundBlue;
-            display:inline;
-           
-           
-        }
-        &:hover .fa-angle-down{
+         .fa-angle-down{
             display: none;
-            margin-left:5px;
+          
+           
         }
-        &:hover ul{
+         ul{
             position: absolute;
             display:block;
         }
+    }
         ul {
+           top: 30px;
             margin:0px;
             padding:0px;
             display: none;
@@ -182,187 +82,61 @@
                 }
               
             }
+            &:after{
+                position: absolute;
+                top:-8px;
+                width: 1.65rem;
+                height: 0.3125rem;
+                content: "";
+                background: $backgroundBlue;
+            }
            
       }
     }
     
 }
-}
-
-.studyHeader:hover{
-    color: $backgroundBlue;
-}
-
-
-.fa-angle-up{
-    display: none;
-}
-
-
-
-h4{
-    margin:0px;
-}
-#close-btn{
+&__responsive{
     display:none;
 }
-.header__nav__responsive{
-    display:none;
 }
-#preheaderLeft{
-    border-top:1px solid $backgroundBlue;
-}
-.header__nav__responsive 
-    {
-        li {
-    padding:10px 20px;
-    list-style: none;
-    color:$backgroundBlue;
-        }
-        
-}
-
-@include lgtablet {
+@include lgtablet{
     
-    
-    .header__nav {
+    &__nav {
         ul{
        
         margin:0px;
         li{
-            margin-left: 32px;
-            
+            margin-left: 35px;
         }
     }
     }
-    #hamburger,.fa-times{
-        display:none;
-    }
-    .logo {
-        width: 50vw;
-        height: 10vh;
-    }
 }
-@include smtablet {
-  
-    .preheader__left{
-        display:none;
-    }
-     
-    .header{
-       padding:0px 20px;
-   }
-   .logo{
-       width:70vw;
-       height: 20vh;
-      
-   }
-   .preheader__right__links{
-       margin-right: 70%;
-   }
 
-   .preheader{
-       padding:20px 20px;
-    
-   }
-   #hamburger{
-       display:block;
-   }
-   .preheaderSubcontent__grid{
-       display:block;
-   }
-   .responsive 
-   {
-       ul{
-      
-       display: block;
-     
-     
-     }
-    }
-     .header__nav {
-       display:none;
-       ul
-       { 
-      
-        li:hover ul{
-           position: relative;
-       }
-       }
-   }
-   .responsive {
-       display: block;
-       ul 
-       {
-           li{
-           background: $backgroundWhite;
-           padding:5px 0px;
-           color: $backgroundBlue;
-       }
-    }
-   }
-  
-  
-
-   .header__nav .responsive {
-       ul{
-       padding: 0px;
-       margin:0px;
-       }
-   }
-}
-   #preheaderLeft{
-       border-top:1px solid $backgroundBlue;
-   }
-   .header__nav__responsive 
-    {
-        li {
-       padding:10px 20px;
-       list-style: none;
-       color:$backgroundBlue;
-   }
-    }
-    
-
-    @include mobile{
-  
-     .preheader__left{
-         display:none;
-     }
-      
-     .header{
-        padding:0px;
-    }
-    .logo{
-        width:100vw;
-        height: 10vh;
-        margin: auto;
-    display: block;
-       
-    }
-    .preheader__right__links{
-        margin-right: 50%;
-    }
-    .preheader{
-        padding:20px 20px;
-     
-    }
-    #hamburger{
-        display:block;
-    }
-    .preheaderSubcontent__grid{
-        display:block;
-    }
-    .responsive 
-    {
-        ul{
-       
-        display: block;
-        }
-      }
-   
-      .header__nav {
+@include smtablet{
+    padding:0px 20px;
+       &__nav {
+     display:none;
+         .responsive {
+         ul{
+         padding: 0px;
+         margin:0px;
          
+     }
+  }
+     ul
+     { 
+    
+      li:hover ul{
+         position: relative;
+     }
+     }
+ }
+}
+@include mobile{
+    padding:0px;
+
+    &__nav {
+     
         display:none;
         ul{
             
@@ -372,35 +146,252 @@ h4{
         }
     }
 }
-    .responsive {
+}
+
+}
+.fa-angle-down:before {
+    content: "\f107";
+    margin-left: 1px;
+}
+.modal-open {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+.preheader{
+    
+   @include background;
+   padding:10px 110px;
+   display: flex;
+
+   &__left{
+
+    display:flex;
+    padding: 0px;
+    margin:0px auto;
+    max-width:1440px;
+    li{
+        cursor: pointer;
+        text-decoration: none;
+        list-style: none;
+        margin-right: 10px;
+        font-size: 12px;
+        a:hover{
+            border-bottom: 1px solid $underline;
+        }
+    }
+}
+
+    &__right{
+
+        display: flex;
+        justify-content: flex-end;
+        cursor: pointer;
+        text-decoration: none;
+        list-style: none;
+        margin-right: 10px;
+        font-size: 12px;
+        width:100%;
+        margin:0px auto;
+        max-width:1440px;
+
+    li{
+        margin-right: 10px;
+        a{
+            color: $textColorWhite;
+            text-decoration: none;
+        }
+    }
+    &__links{
+        display: flex;
+    }
+}
+
+@include smtablet{
+    padding:20px 20px;
+        &__left{
+         display:none;
+        }
+        &__right{
+            &__links{
+         margin-right: 70%;
+     }
+ }
+ }
+@include mobile{
+    padding:20px 20px;
+    &__left{
+        display:none;
+    }
+    &__right{
+        &__links{
+        margin-right: 50%;
+    }
+}
+ 
+}
+}
+
+
+h4{
+    margin:0px;
+}
+#close-btn{
+    display:none;
+}
+
+
+.preheaderSubcontent{
+
+    display: none;
+    @include background;
+   padding:0px 80px;
+   
+   &__con{
+    display: flex;
+
+
+    &__item{
+    padding:20px;
+    flex:1;
+    ul 
+    {
+        li{
+    cursor: pointer;
+    list-style: none;
+    font-size: 12px;
+    padding:8px 0px;
+
+    &:hover{
+        background: $hoverBlue;
+    }
+    }
+    }
+    h4{
+        padding: 7px 0px;
+        border-bottom: 1px solid $underline;
+    }
+}
+
+   
+    }
+  @include smtablet{
+        &__con{
+        display:block;
+        }
+    }
+   @include mobile{
+        &__con{
+        display:block;
+        }
+    }
+
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: -webkit-fill-available;
+   
+    
+  }
+
+.logo{
+    width:30vw;
+    @include lgtablet{
+      
+            width: 50vw;
+            height: 10vh;
         
+    }
+
+@include smtablet {
+         
+         width:70vw;
+        height: 20vh;
+}  
+   @include mobile{
+  
+        width:100vw;
+        height: 10vh;
+        margin: auto;
         display: block;
-        ul
-        {
-            
-             li{
+       
+    
+   }
+}
+#hamburger{
+    display:none;
+}
+
+
+.fa-angle-up{
+    display: none;
+}
+
+
+
+#preheaderLeft{
+    border-top:1px solid $backgroundBlue;
+}
+
+
+@include lgtablet {
+  
+    
+      #hamburger,.fa-times{
+        display:none;
+    }
+  
+}
+
+@include smtablet {
+       
+   #hamburger{
+       display:block;
+   }
+   
+   .responsive {
+       display: block;
+       ul 
+       {
+        display: block;
+           li{
+           background: $backgroundWhite;
+           padding:5px 0px;
+           color: $backgroundBlue;
+       }
+    }
+   }
+   
+}
+ 
+
+    @include mobile{
+       
+    
+    .studyHeader{
+        margin:20px 20px;
+    }
+    #hamburger{
+        display:block;
+    }
+  
+    .responsive 
+    {
+        display: block;
+        ul{
+           display: block;
+           li{
             background: $backgroundWhite;
             padding:5px 0px;
             color: $backgroundBlue;
             
              }
         }
-    }
+      }
+     
 
-    .header__nav .responsive 
-        {
-            ul{
-        padding: 0px;
-        margin:0px;
-            }
-    }
-    .bannerContainer__text {
-        
-        width: 80%;
-        text-align: center;
-    }
-}
    
-
+}
   
     
