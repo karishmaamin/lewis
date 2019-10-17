@@ -29,8 +29,8 @@ window.onscroll = function(){headerfixed()};
 function headerfixed() 
 {
     
-    var header = document.getElementById("myHeader");
-    var sticky = header.offsetTop;
+    let header = document.getElementById("myHeader");
+    let sticky = header.offsetTop;
     if (window.pageYOffset > sticky) {
       header.classList.add("sticky");
     } else {
