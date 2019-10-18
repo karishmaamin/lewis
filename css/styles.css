@@ -107,11 +107,11 @@
     margin: 0px;
   }
   .header__nav ul li {
-    margin-left: 35px;
+    margin-left: 32px;
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: 768px) and (min-width: 300) {
+@media screen and (orientation: landscape) and (max-width: 768px) and (min-width: 300px) {
   .header .sticky {
     position: relative;
   }
@@ -317,7 +317,7 @@ h4 {
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: 768px) and (min-width: 300) {
+@media screen and (orientation: landscape) and (max-width: 768px) and (min-width: 300px) {
   .logo .sticky {
     position: relative;
   }
@@ -357,7 +357,7 @@ h4 {
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: 768px) and (min-width: 300) {
+@media screen and (orientation: landscape) and (max-width: 768px) and (min-width: 300px) {
   .sticky {
     position: relative;
   }
@@ -455,7 +455,7 @@ h4 {
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: 768px) and (min-width: 300) {
+@media screen and (orientation: landscape) and (max-width: 768px) and (min-width: 300px) {
   .studyHeader .sticky {
     position: relative;
   }
@@ -541,7 +541,7 @@ h4 {
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: 768px) and (min-width: 300) {
+@media screen and (orientation: landscape) and (max-width: 768px) and (min-width: 300px) {
   .studyBody .sticky {
     position: relative;
   }
@@ -659,7 +659,7 @@ h4 {
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: 768px) and (min-width: 300) {
+@media screen and (orientation: landscape) and (max-width: 768px) and (min-width: 300px) {
   .studyContent .sticky {
     position: relative;
   }
@@ -790,7 +790,7 @@ strong:hover {
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: 768px) and (min-width: 300) {
+@media screen and (orientation: landscape) and (max-width: 768px) and (min-width: 300px) {
   .footerBanner .sticky {
     position: relative;
   }
@@ -952,7 +952,7 @@ strong:hover {
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: 768px) and (min-width: 300) {
+@media screen and (orientation: landscape) and (max-width: 768px) and (min-width: 300px) {
   .footerarea .sticky {
     position: relative;
   }
