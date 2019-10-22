@@ -15,13 +15,13 @@ function hamburger_function() {
     document.getElementById("avoidscroll").classList.toggle("modal-open");
    
     if(document.getElementById("myTopnav").className=="header__nav responsive"){
-        document.getElementById("hamburger").style.display = "none";
+        document.getElementById("hamburger-con").style.display = "none";
         document.getElementById("close-btn").style.display = "block";
         document.getElementById("preheaderLeft").style.display="block";
        
     }
     else{
-        document.getElementById("hamburger").style.display = "block";
+        document.getElementById("hamburger-con").style.display = "block";
         document.getElementById("close-btn").style.display = "none";
         document.getElementById("preheaderLeft").style.display="none";
     }

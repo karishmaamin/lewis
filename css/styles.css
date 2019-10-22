@@ -169,6 +169,10 @@
     height: 235px;
     top: 5px;
   }
+  .header__nav ul li:hover ul li {
+    -webkit-transition: none;
+    transition: none;
+  }
 }
 
 .modal-open {
@@ -225,7 +229,7 @@
   height: 2%;
   content: "";
   margin-left: 4px;
-  background-color: white;
+  background-color: lightgrey;
 }
 
 .preheader__left ul li:last-child::after {
@@ -258,6 +262,8 @@
 
 .preheader__right li {
   margin-right: 10px;
+  list-style: none;
+  text-decoration: none;
 }
 
 .preheader__right li a {
@@ -289,6 +295,14 @@
   }
   .preheader__left {
     display: none;
+  }
+  .preheader__right li {
+    margin-right: 10px;
+    list-style: none;
+    text-decoration: none;
+  }
+  .preheader__right li a {
+    text-decoration: none;
   }
   .preheader__right__links {
     margin-right: 50%;
@@ -392,7 +406,7 @@ h4 {
   }
 }
 
-#hamburger {
+#hamburger-con {
   display: none;
 }
 
@@ -405,7 +419,7 @@ h4 {
 }
 
 @media (min-width: 1024px) and (max-width: 1259px) {
-  #hamburger, .fa-times {
+  #hamburger-con, .fa-times {
     display: none;
   }
 }
@@ -417,7 +431,7 @@ h4 {
 }
 
 @media (min-width: 576px) and (max-width: 1023px) {
-  #hamburger {
+  #hamburger-con {
     display: block;
   }
   .responsive {
@@ -437,7 +451,7 @@ h4 {
   .studyHeader {
     margin: 20px 20px;
   }
-  #hamburger {
+  #hamburger-con {
     display: block;
   }
   .responsive {
@@ -470,6 +484,11 @@ h4 {
 #search-close-btn {
   color: #004b8d;
   margin-left: 5px;
+}
+
+#hamburger-con {
+  border: 1px solid white;
+  padding: 5px;
 }
 
 .bannerContainer {

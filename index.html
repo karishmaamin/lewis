@@ -33,8 +33,11 @@
                         </li>
                         <li><a><i class="fa fa-search" aria-hidden="true" onclick="search_function();"></i></a></li>
                     </div>
-                    <li><a href="#" onclick="hamburger_function();"><i class="fa fa-bars fa-2x" id="hamburger"
-                                aria-hidden="true"></i></a></li>
+                    <li>
+                        <div id="hamburger-con">
+                    <a href="#" onclick="hamburger_function();"><i class="fa fa-bars fa-2x" id="hamburger"
+                                aria-hidden="true"></i></a>
+                            </div></li>
                     <li><a href="#" onclick="hamburger_function();"><i class="fa fa-times fa-2x" id="close-btn"
                                 aria-hidden="true"></i></a></li>
                 </div>
@@ -96,7 +99,7 @@
                     </div>
                     <div class="header__content__search__Container" id="header__content__search__Container">
                         <input type="text" class="search-text" value="Enter search text">
-                        <input type="submit" class="search-button">
+                        <input type="submit" class="search-button" value="search">
                         <i class="fa fa-times " onclick="search_close_function();" id="search-close-btn" aria-hidden="true"></i>
                     </div>
                 </div>

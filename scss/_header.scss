@@ -200,6 +200,9 @@
             position: relative;
             height: 235px;
             top: 5px;
+            li{
+            transition: none;
+            }
             
         }
     }
@@ -245,7 +248,7 @@
         }
         &:after{
             @include menu;
-            background-color: white;
+            background-color: lightgrey;
         }
         
     }
@@ -273,6 +276,8 @@
 
     li{
         margin-right: 10px;
+        list-style: none;
+        text-decoration: none;
         a{
             color: $textColorWhite;
             text-decoration: none;
@@ -300,8 +305,19 @@
         display:none;
     }
     &__right{
+        li{
+            margin-right: 10px;
+            list-style: none;
+            text-decoration: none;
+            a{
+               
+                text-decoration: none;
+
+            }
+        }
         &__links{
         margin-right: 50%;
+       
     }
 }
  
@@ -398,7 +414,7 @@ h4{
     
    }
 }
-#hamburger{
+#hamburger-con{
     display:none;
 }
 
@@ -419,7 +435,7 @@ h4{
 @include lgtablet {
   
     
-      #hamburger,.fa-times{
+    #hamburger-con,.fa-times{
         display:none;
     }
   
@@ -427,7 +443,7 @@ h4{
 
 @include smtablet {
        
-   #hamburger{
+    #hamburger-con{
        display:block;
    }
    
@@ -453,7 +469,7 @@ h4{
     .studyHeader{
         margin:20px 20px;
     }
-    #hamburger{
+    #hamburger-con{
         display:block;
     }
   
@@ -495,4 +511,8 @@ h4{
 #search-close-btn{
     color:$backgroundBlue;
     margin-left:5px;
+}
+#hamburger-con{
+    border: 1px solid white;
+    padding:5px;
 }
