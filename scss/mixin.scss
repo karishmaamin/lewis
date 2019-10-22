@@ -1,7 +1,14 @@
 $lgtablet-width: 1024px;
 $phone:576px;
 $desktop-width: 1260px;
-
+@mixin menu()
+{
+  position: absolute;
+  width: 1px;
+  height: 2%;
+  content: "";
+  margin-left: 4px;
+}
 @mixin background()
 {
     background:$backgroundBlue;

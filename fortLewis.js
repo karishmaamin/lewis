@@ -1,8 +1,14 @@
 function preheader_function() {
     document.getElementById("preheader-subcontent").classList.toggle("show");
 }
-
-
+function search_function()
+{
+    document.getElementById("header__content__search__Container").style.display = "block";
+}
+function search_close_function()
+{
+    document.getElementById("header__content__search__Container").style.display = "none";
+}
 function hamburger_function() {
     
     document.getElementById("myTopnav").classList.toggle("responsive");

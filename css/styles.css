@@ -14,6 +14,13 @@
   max-width: 1440px;
 }
 
+.header__content__search__Container {
+  position: absolute;
+  top: 7%;
+  left: 75%;
+  display: none;
+}
+
 .header ul {
   padding: 0px;
 }
@@ -82,9 +89,8 @@
 }
 
 .header__nav ul li ul li:hover {
-  width: 200px;
+  width: 195px;
   cursor: pointer;
-  opacity: 0.7;
   color: #ffffff;
   padding-left: 10px;
 }
@@ -103,6 +109,11 @@
 }
 
 @media (min-width: 1024px) and (max-width: 1259px) {
+  .header__content__search__Container {
+    position: relative;
+    left: 0px;
+    display: none;
+  }
   .header__nav ul {
     margin: 0px;
   }
@@ -121,6 +132,11 @@
   .header {
     padding: 0px 20px;
   }
+  .header__content__search__Container {
+    position: relative;
+    left: 0px;
+    display: none;
+  }
   .header__nav {
     display: none;
   }
@@ -137,6 +153,11 @@
   .header {
     padding: 0px;
   }
+  .header__content__search__Container {
+    position: relative;
+    left: 0px;
+    display: none;
+  }
   .header__nav {
     display: none;
   }
@@ -148,11 +169,6 @@
   }
 }
 
-.fa-angle-down:before {
-  content: "\f107";
-  margin-left: 1px;
-}
-
 .modal-open {
   height: 100vh;
   overflow-y: hidden;
@@ -162,12 +178,19 @@
   background: #004b8d;
   color: #ffffff;
   padding: 10px 110px;
+}
+
+.preheader__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .preheader__left {
+  margin: 0 auto;
+  max-width: 1440px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -176,7 +199,13 @@
   max-width: 1440px;
 }
 
-.preheader__left li {
+.preheader__left ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.preheader__left ul li {
   cursor: pointer;
   text-decoration: none;
   list-style: none;
@@ -184,11 +213,31 @@
   font-size: 12px;
 }
 
-.preheader__left li a:hover {
+.preheader__left ul li a:hover {
   border-bottom: 1px solid #A9A9A9;
 }
 
+.preheader__left ul li a:after {
+  position: absolute;
+  width: 1px;
+  height: 2%;
+  content: "";
+  margin-left: 4px;
+  background-color: white;
+}
+
+.preheader__left ul li:last-child::after {
+  position: absolute;
+  width: 1px;
+  height: 2%;
+  content: "";
+  margin-left: 4px;
+  background-color: #004b8d;
+}
+
 .preheader__right {
+  margin: 0 auto;
+  max-width: 1440px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -263,6 +312,8 @@ h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
 .preheaderSubcontent__con__item {
@@ -348,7 +399,7 @@ h4 {
 }
 
 #preheaderLeft {
-  border-top: 1px solid #004b8d;
+  margin-left: 6px;
 }
 
 @media (min-width: 1024px) and (max-width: 1259px) {
@@ -400,42 +451,91 @@ h4 {
   }
 }
 
-.lg-fontsize {
-  font-size: 2rem;
-  padding-top: 10px;
+.search-text {
+  padding: 6px 0px;
 }
 
-.xl-fontsize {
-  font-size: 2.75rem;
-  padding-top: 100px;
+.search-button {
+  padding: 0px;
+  margin: -6px;
+  background: #004b8d;
+  color: white;
+  padding: 5px;
+  border: none;
+  height: 30px;
+}
+
+#search-close-btn {
+  color: #004b8d;
+  margin-left: 5px;
 }
 
 .bannerContainer {
-  background: url("../images/sport.jpg");
+  background: url(../images/sport.jpg);
   height: 400px;
-  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .bannerContainer__content {
   margin: 0px auto;
   max-width: 1440px;
+  text-align: center;
 }
 
 .bannerContainer__text {
   color: #ffffff;
   font-family: "Alfa Slab One", serif;
-  padding-left: 100px;
-  font-weight: bolder;
-  width: 30%;
+}
+
+.bannerContainer__text.lg-fontsize {
+  font-size: 1.5rem;
+}
+
+.bannerContainer__text.xl-fontsize {
+  font-size: 2.75rem;
 }
 
 @media (max-width: 575px) {
-  .bannerContainer__text {
-    padding: 20px;
-    width: 87%;
+  .bannerContainer__text.lg-fontsize {
+    font-size: 1rem;
+  }
+  .bannerContainer__text.xl-fontsize {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1259px) {
+  .bannerContainer__text.lg-fontsize {
+    font-size: 1rem;
+  }
+  .bannerContainer__text.xl-fontsize {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 768px) and (min-width: 300px) {
+  .bannerContainer .sticky {
+    position: relative;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 1023px) {
+  .bannerContainer__text.lg-fontsize {
+    font-size: 1rem;
+  }
+  .bannerContainer__text.xl-fontsize {
+    font-size: 2rem;
   }
 }
 
@@ -445,8 +545,9 @@ h4 {
   border-bottom: 1px solid #A9A9A9;
 }
 
-.studyHeader__text {
-  font-weight: bold;
+.studyHeader__content {
+  margin: 0px auto;
+  max-width: 1440px;
 }
 
 @media (min-width: 1024px) and (max-width: 1259px) {
@@ -502,7 +603,6 @@ h4 {
 .studyBody__sidebar ul li {
   cursor: pointer;
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
   list-style: none;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -578,7 +678,7 @@ h4 {
   margin-top: 13px;
 }
 
-.studyContent h2 {
+.studyContent .studyContentp {
   color: #004b8d;
   font-family: "Alfa Slab One", serif;
   font-size: 2rem;
@@ -591,7 +691,6 @@ h4 {
 .studyContent__nav {
   font-size: 1.5rem;
   font-family: "Alfa Slab One", serif;
-  font-weight: bold;
   margin-top: 60px;
   margin-bottom: 30px;
 }
@@ -616,9 +715,10 @@ h4 {
 }
 
 .studyContent__img {
-  vertical-align: top;
-  display: inline-block;
+  vertical-align: middle;
   text-align: center;
+  display: inline-block;
+  cursor: pointer;
   width: 250px;
   margin: 5px;
 }
@@ -632,13 +732,20 @@ h4 {
 }
 
 .studyContent__img__caption {
-  display: block;
   background-color: #E5E5E5;
   color: #004b8d;
   width: 100%;
   height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: -5px;
-  padding-top: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   letter-spacing: 0.1rem;
   font-family: 14.4px "Roboto", sans-serif;
 }
@@ -718,14 +825,10 @@ strong:hover {
 }
 
 .footerBanner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   background: url("../images/footer_banner.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 10%;
   text-align: center;
 }
 
@@ -743,6 +846,15 @@ strong:hover {
   line-height: 1.5;
   color: #ffffff;
   font-size: 1.65rem;
+}
+
+.footerBanner__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10%;
+  margin: 0px auto;
+  max-width: 1440px;
 }
 
 .footerBanner__text {
@@ -771,7 +883,7 @@ strong:hover {
 }
 
 @media (min-width: 576px) and (max-width: 1023px) {
-  .footerBanner {
+  .footerBanner__content {
     display: block;
   }
   .footerBanner__sidebar ul li {
@@ -781,7 +893,7 @@ strong:hover {
 }
 
 @media (min-width: 1024px) and (max-width: 1259px) {
-  .footerBanner {
+  .footerBanner__content {
     display: block;
   }
   .footerBanner__sidebar ul li {
@@ -799,6 +911,8 @@ strong:hover {
 @media (max-width: 575px) {
   .footerBanner {
     padding: 20px, 5px;
+  }
+  .footerBanner__content {
     display: block;
   }
   .footerBanner__text {
@@ -1011,6 +1125,7 @@ strong:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  cursor: pointer;
 }
 
 .con-admision {
@@ -1019,6 +1134,7 @@ strong:hover {
   list-style: none;
   font-size: 15px;
   padding: 15px 0px;
+  cursor: pointer;
 }
 
 ol li {
@@ -1028,6 +1144,8 @@ ol li {
 
 .footerDown {
   padding: 10px 0px 10px 20px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .footerDown p,
@@ -1042,6 +1160,10 @@ ol li {
   float: right;
   margin-right: 10px;
   font-size: 14px;
+}
+
+.footerDown__right ul li a {
+  cursor: pointer;
 }
 
 @media (max-width: 575px) {

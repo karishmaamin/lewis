@@ -3,37 +3,43 @@
 <head>
     <title></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/styles.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 </head>
 
 <body id="avoidscroll">
-      <!-- header starts here -->
+    <!-- header starts here -->
     <header>
         <!-- pre-header starts here -->
         <div class="preheader">
-            <div class="preheader__left">
+            <div class="preheader__content">
+                <div class="preheader__left">
 
-
-                <li><a>ALUMNI</a></li>
-                <li><a>FOUNDATION</a></li>
-                <li><a>GIVE</a></li>
-            </div>
-
-            <div class="preheader__right">
-                <div class="preheader__right__links">
-                    <li><a href="#" onclick="preheader_function();">QUICK LINKS<i class="fa fa-angle-down"
-                                aria-hidden="true"></i></a>
-                    </li>
-                    <li><a><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                    <ul>
+                        <li><a>ALUMNI</a></li>
+                        <li><a>FOUNDATION</a></li>
+                        <li><a>GIVE</a></li>
+                    </ul>
                 </div>
-                <li><a href="#" onclick="hamburger_function();"><i class="fa fa-bars fa-2x" id="hamburger"
-                            aria-hidden="true"></i></a></li>
-                <li><a href="#" onclick="hamburger_function();"><i class="fa fa-times fa-2x" id="close-btn"
-                            aria-hidden="true"></i></a></li>
-            </div>
 
+                <div class="preheader__right">
+                    <div class="preheader__right__links">
+                        <li><a href="#" onclick="preheader_function();">QUICK LINKS<i class="fa fa-angle-down"
+                                    aria-hidden="true"></i></a>
+                        </li>
+                        <li><a><i class="fa fa-search" aria-hidden="true" onclick="search_function();"></i></a></li>
+                    </div>
+                    <li><a href="#" onclick="hamburger_function();"><i class="fa fa-bars fa-2x" id="hamburger"
+                                aria-hidden="true"></i></a></li>
+                    <li><a href="#" onclick="hamburger_function();"><i class="fa fa-times fa-2x" id="close-btn"
+                                aria-hidden="true"></i></a></li>
+                </div>
+
+            </div>
         </div>
         <div class="preheaderSubcontent" id="preheader-subcontent">
             <div class="preheaderSubcontent__con">
@@ -84,9 +90,15 @@
 
         <div class="header" id="myHeader">
             <div class="header__content">
-                <div>
-                    <img src="images/FLC_logo_type_blue.png" class="logo">
-
+                <div class="header__content__search">
+                    <div>
+                        <img src="images/FLC_logo_type_blue.png" class="logo">
+                    </div>
+                    <div class="header__content__search__Container" id="header__content__search__Container">
+                        <input type="text" class="search-text" value="Enter search text">
+                        <input type="submit" class="search-button">
+                        <i class="fa fa-times " onclick="search_close_function();" id="search-close-btn" aria-hidden="true"></i>
+                    </div>
                 </div>
                 <div class="header__nav" id="myTopnav">
                     <ul>
@@ -158,9 +170,9 @@
             </div>
         </div>
     </header>
-     <!-- header ens here -->
+    <!-- header ens here -->
     <main>
-         <!-- banner starts here -->
+        <!-- banner starts here -->
         <div class="bannerContainer">
             <div class="bannerContainer__content">
                 <p class="bannerContainer__text xl-fontsize">Under Graduate Areas of Study</p>
@@ -168,8 +180,8 @@
             </div>
         </div>
 
-<!-- banner ends here -->
-<!-- main section starts here -->
+        <!-- banner ends here -->
+        <!-- main section starts here -->
         <div class="studyHeader">
             <div class="studyHeader__content">
                 <i class="fa fa-home" aria-hidden="true"></i>
@@ -194,7 +206,7 @@
                 </ul>
             </div>
             <div class="studyContent">
-                <h2>Follow your field guide to fulfillment</h2>
+                <p class="studyContentp">Follow your field guide to fulfillment</p>
                 <p class="studyContent__text">Whether you already know what career you’d enjoy or are curious to figure
                     it
                     out as you go along, FLC’s academic programs provide the perfect balance of structure and freedom.
@@ -411,23 +423,25 @@
 
             </div>
         </div>
-         <!-- main section ends here -->
+        <!-- main section ends here -->
     </main>
-    
-     <!-- main ends here -->
-<!-- footer starts here -->
+
+    <!-- main ends here -->
+    <!-- footer starts here -->
     <footer>
         <div class="footerBanner">
-            <div class="footerBanner__text">
-                <h4>You know who you are</h4>
-                <p>COME SEE WHAT YOU CAN DO</p>
-            </div>
-            <div class="footerBanner__sidebar">
-                <ul>
-                    <li><a>Apply <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-                    <li><a>Visit <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-                    <li><a>Get Info <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
-                </ul>
+            <div class="footerBanner__content">
+                <div class="footerBanner__text">
+                    <h4>You know who you are</h4>
+                    <p>COME SEE WHAT YOU CAN DO</p>
+                </div>
+                <div class="footerBanner__sidebar">
+                    <ul>
+                        <li><a>Apply <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                        <li><a>Visit <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                        <li><a>Get Info <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -518,7 +532,7 @@
 
         </div>
     </footer>
-<!-- footer ends here -->
+    <!-- footer ends here -->
 
     <script src="fortLewis.js"></script>
 </body>

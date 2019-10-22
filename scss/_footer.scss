@@ -1,10 +1,10 @@
 .footerBanner {
-    display: flex;
+   
     background: url("../images/footer_banner.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 10%;
+   
     text-align: center;
 
     h4 {
@@ -23,6 +23,12 @@
         font-size: 1.65rem;
     }
 
+    &__content{
+        display: flex;
+        padding: 10%;
+        margin: 0px auto;
+        max-width: 1440px;
+    }
     &__text {
         margin: auto;
     }
@@ -51,7 +57,9 @@
     }
 
     @include smtablet {
+        &__content{
         display: block;
+        }
 
         &__sidebar {
             ul {
@@ -64,7 +72,9 @@
     }
 
     @include lgtablet {
-        display: block;
+        &__content{
+            display: block;
+            }
 
         &__sidebar {
             ul {
@@ -79,7 +89,9 @@
     @include mobile {
 
         padding: 20px, 5px;
-        display: block;
+        &__content{
+            display: block;
+            }
 
         &__text {
             display: block;
@@ -296,7 +308,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+    cursor: pointer;
 }
 
 .con-admision {
@@ -305,7 +317,7 @@
     list-style: none;
     font-size: 15px;
     padding: 15px 0px;
-
+    cursor: pointer;
 
 }
 
@@ -320,12 +332,14 @@ ol {
 .footerDown {
 
     padding: 10px 0px 10px 20px;
-
+    max-width: 1440px;
+    margin:0 auto;
     p,
     div {
         display: inline-block;
         width: 45%;
         color: $textColorWhite;
+       
     }
 
     &__right {
@@ -335,6 +349,9 @@ ol {
                 float: right;
                 margin-right: 10px;
                 font-size: 14px;
+                a{
+                    cursor: pointer;
+                }
             }
         }
 
