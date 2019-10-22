@@ -1193,6 +1193,24 @@ ol li {
   cursor: pointer;
 }
 
+.footerDown__right ul li a:after {
+  position: absolute;
+  width: 1px;
+  height: 2%;
+  content: "";
+  margin-left: 4px;
+  background-color: lightgrey;
+}
+
+.footerDown__right ul li:first-child::after {
+  position: absolute;
+  width: 1px;
+  height: 2%;
+  content: "";
+  margin-left: 4px;
+  background-color: #004b8d;
+}
+
 @media (max-width: 575px) {
   .contactInfo {
     display: block;
